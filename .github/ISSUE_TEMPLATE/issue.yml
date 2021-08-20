@@ -1,0 +1,99 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: operatingsystem
+    attributes:
+      label: What operating system are you on?
+      multiple: false
+      options:
+        - Windows
+        - Linux
+        - MacOS
+        - Android
+  - type: input
+    id: operatingsystem_version
+    attributes:
+      label: What version of your operating system are you using?
+      placeholder: ex. Ubuntu 18.04
+    validations:
+      required: true
+      required: true
+  - type: dropdown
+    id: port
+    attributes:
+      label: What port of PySimpleGUI are you using?
+      multiple: false
+      options:
+        - tkinter
+        - Qt
+        - Wx
+        - Web
+  - type: input
+    id: python_version
+    attributes:
+      label: What version of Python are you using?
+      placeholder: ex. 3.9.6
+    validations:
+      required: true
+  - type: input
+    id: sg_version
+    attributes:
+      label: What version of PySimpleGUI are you using?
+      placeholder: ex. 3.9.6
+    validations:
+      required: true
+  - type: input
+    id: gui_version
+    attributes:
+      label: What version of the GUI are you using?
+      placeholder: ex. 8.6.10
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
